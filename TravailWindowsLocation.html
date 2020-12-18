@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!-- Type HTML5 -->
+	<html>
+		<head> <!-- En-tête de page -->
+	 		<meta charset="utf-8"/> <!-- pour utiliser les accents -->
+	 		<html lang="fr">
+	 		<link rel="shortcut icon" type="image/x-icon" href="DossierImages/IconePage.png">
+	 		<link rel="stylesheet" type="text/css" href="DossierCSS/Basic.css">
+			<title img src="DossierImages/IconeTitre.png"> Page Travail WindowsLocation </title>
+		</head>
+
+		<body> <!-- Corps de la page -->
+
+			<header> <img src="DossierImages/IconeBanner.png" tile="logo" type="image/x-icon"> </header>
+			<!-- Le titre et logo de la page -->
+
+			<style>
+			</style>
+
+			<div>
+				<h2 id="Haut"> Page Windows Location </h2>
+
+			<p> Voici un exercise sur la méthode de naviguer sur le net qui est le windows.location .<br/>
+			D'après les leçons similaires en Web Dynamique, cela devrait prendre beaucoups de temps.</p>
+			</div>
+
+			<listbox id="GeneratedList" onselect="alert(this.selectedItem.label);"> <!-- Je veux utiliser ceçi dans mon index -->
+				<listitem label="Lien1"/>
+				<listitem label="Lien2"/>
+				<listitem label="Lien3"/>
+			</listbox>
+
+			<script>
+				var Liens = ["Lien1", "Lien2", "Lien3"];
+
+				Liens.addEventListener("click", TtmtNode);
+			    function TtmtNode(){
+				    console.log(document.firstChild.nodeName);
+				    console.log(document.firstChild.nodeValue);
+				    console.log(document.lastChild.nodeValue);
+
+				document.write("<select>, <option>, </option>, </select>");
+				document.getElementById("GeneratedList").appendItem("Lien1", "Lien2");
+
+
+
+			</script>
+
+			<div>
+				<p> ---- </p> <br/>
+			</div>
+
+
+			<footer> <div>Fais par David Lechevalier, le dernier de la classe HTML, d.lechevalier@ludus-academie.com</div> </footer>
+
+			<a href="#Haut" id="Retour"> Aller en haut de la page </a> <!-- Lien Interne et Externe-->
+			<a href="index.html"> Retour à l'index </a> <!-- Changer la couleur des lien en violet et Alt. en Rouge foncé ?
+			+ lisible -->
+		</body>
+</html>

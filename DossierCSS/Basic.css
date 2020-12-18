@@ -1,0 +1,38 @@
+body {				/* Voici plusieurs balises généraux modifiés pour aporter un style standart à mes pages */
+    margin:0;
+    padding:0;
+
+    background-image: url("../DossierImages/Background.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment : fixed;
+    background-color: lightblue;
+}
+
+div, span, form {
+	margin:15px;
+    padding:20px;
+
+	border-style: double;
+	border-width: 5px;
+	border-color: black;
+}
+
+fieldset{
+    border: solid 2px;
+}
+
+a {
+    font-color: darkblue;
+}
+
+input, label, button, h3, h2, h1, p {
+	margin:5px;
+    padding:5px;
+}
+
+#Retour {
+	margin:10px;
+	padding:20px;
+}

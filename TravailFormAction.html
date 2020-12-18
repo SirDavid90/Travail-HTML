@@ -1,0 +1,131 @@
+<!DOCTYPE html> <!-- Type HTML5 -->
+	<html>
+		<head> <!-- En-tête de page -->
+	 		<meta charset="utf-8"/> <!-- pour utiliser les accents -->
+	 		<html lang="fr">
+	 		<link rel="shortcut icon" type="image/x-icon" href="DossierImages/IconePage.png">
+	 		<link rel="stylesheet" type="text/css" href="DossierCSS/Basic.css">
+			<title img src="DossierImages/IconeTitre.png"> Page Travail FormAction </title>
+		</head>
+
+		<body> <!-- Corps de la page -->
+
+			<header> <img src="DossierImages/IconeBanner.png" tile="logo" type="image/x-icon"> </header>
+			<!-- Le titre et logo de la page -->
+
+			<style>
+			</style>
+
+			<script>
+			</script>
+
+			<div>
+				<h2 id="Haut"> Page Form Action </h2>
+
+			<p> Voici un exercise sur la méthode de naviguer sur le net qui est la Form Action.<br/>
+			D'après les mêmes leçons en Web Statique, cela ne devrait prendre beaucoups de temps.</p>
+			</div>
+
+			<form id="FormId" name="FormName" méthode="get" action="Liendepage">
+				<fieldset> <legend> Exemple : veuillez indiquer votre nom et prénom </legend> </fieldset>
+				<label for="prenom">Prénom:</label>
+				<input type="text" id="prenom" name="prenom"><br><br>
+				<label for="nom">Nom:</label>
+				<input type="text" id="nom" name="nom"><br><br>
+				<input type="submit" value="Envoyer">
+
+				<button id="" type="submit" onsubmit="" value="">
+				<select id="">
+					<option value=""> </option>
+					<option> </option>
+					<option> </option>
+					<option> </option>
+				</select>
+				<input type="" onclick="">
+
+			</form>
+
+			<pre>  /* Creation des elements pour le formulaire*/
+
+    		 function init(){               
+
+        var el_div = document.createElement('div');
+
+        var el_form = document.createElement('form'); //on crée la balise form
+
+        var el_fieldset = document.createElement('fieldset'); //on crée la balise fieldset
+
+        var el_input_nom = document.createElement('input'); //on crée la balise input (nom)
+
+        var el_input_prenom = document.createElement('input'); //on crée la balise input (prenom)
+
+        var el_input_valider = document.createElement('input');
+
+
+        //on crée la balise input (valider)
+
+      
+        el_div.setAttribute("ID",'tout_ecran');
+
+        // el_form.classList.add("tout_ecran");
+
+        el_form.setAttribute("class",'tout_ecran');
+
+        el_form.setAttribute("action",'#');
+
+ 
+
+        el_form.setAttribute("method", 'post');
+
+       
+
+        el_input_nom.setAttribute('name','nom');
+
+        el_input_nom.setAttribute('type','text');
+
+        el_input_nom.setAttribute('placeholder','Nom : ');
+
+ 
+
+        el_input_prenom.setAttribute('name','prenom');
+
+        el_input_prenom.setAttribute('type','text');
+
+ 
+
+        el_input_valider.setAttribute('value',"message_bouton_valide");
+
+        el_input_valider.setAttribute('type','button');
+
+       
+
+       
+
+        /* Attribution des variables */
+
+        el_form.appendChild(el_fieldset);
+
+        el_fieldset.appendChild(el_input_nom);
+
+        el_fieldset.appendChild(el_input_prenom);
+
+        el_form.appendChild(el_input_valider);
+
+      
+        el_div.appendChild(el_form);
+
+ 
+        //document.body.appendChild(el_div);
+
+        document.getElementsByTagName("body")[0].appendChild(el_div);
+
+    	} </pre>
+
+
+			<footer> <div>Fais par David Lechevalier, le dernier de la classe HTML, d.lechevalier@ludus-academie.com</div> </footer>
+
+			<a href="#Haut" id="Retour"> Aller en haut de la page </a> <!-- Lien Interne et Externe-->
+			<a href="index.html"> Retour à l'index </a> <!-- Changer la couleur des lien en violet et Alt. en Rouge foncé ?
+			+ lisible -->
+		</body> 
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html> <!-- Type HTML5 -->
+	<html>
+		<head> <!-- En-tête de page -->
+	 		<meta charset="utf-8"/> <!-- pour utiliser les accents -->
+	 		<html lang="fr">
+	 		<link rel="shortcut icon" type="image/x-icon" href="DossierImages/IconePage.png">
+	 		<link rel="stylesheet" type="text/css" href="DossierCSS/Basic.css">
+			<title img src="DossierImages/IconeTitre.png"> Page de TravailWindowsLocationForm </title>
+		</head>
+
+		<body> <!-- Corps de la page -->
+
+			<header> <img src="DossierImages/IconeBanner.png" tile="logo" type="image/x-icon"> </header>
+			<!-- Le titre et logo de la page -->
+
+			<style>
+				input, button, div {
+						margin:0px;
+    					padding:0px;
+					}
+			</style>
+
+			
+
+
+			<div>
+				<h2 id="Haut"> Page du Travail Windows.location Form </h2> <!-- Faire un formulaire de façon dynamique : 
+				---- Nom, Prenom, Date, E-mail, Diplome, téléphone, curseur (niveau en langue), niveau en langue de prog (check box)
+				> required most, label placeholder, btnreset, btn submite,  input de button (required bodure en rouge)-->
+				<!-- N1 faire la structure en html, 2 copier dans le JS, 3 le faire marcher -->
+
+			<form id="InsertTextByJS" method='get' action='#'> </p> <!-- text inséré içi car l'ID permet de le trouver -->
+
+			</form>
+			</div>
+
+			<script>
+				function CreateTextByJS() {
+					/*var newForm = document.createElement('form');
+
+					var newContent = "<fieldset> <legend> Formulaire identité </legend>" +
+
+						"<span>Nom :</span> <span class='required'>" +
+						"<input type='text' name='nom' id='nom' placeholder='saisir nom' required='required'> </span> <br/>" +
+
+						"<span>Prénom :</span> <input type='text' name='prénom' id='prénom' placeholder='saisir prénom'> <br/> <br/>" +
+						"<label for='mail'>Email :</label> <span class='required'><input type='email' name='mail' id='mail' placeholder='email' required='required'> </span> <br/>" +
+
+							"<span>Mot de passe :</span> <input type='password' name='passe' value='azerty' size=10>" +
+							"<br/> <br/>" +
+
+							"<input type='radio' name='sexe' value='homme' checked>Homme" +
+							"<input type='radio' name='sexe' value='femme'>Femme" +
+							"<br/>" +
+
+							"<input type='checkbox' name='majeur' checked>Majeur" +
+							"<input type='checkbox' name='etudiant'>Etudiant" +
+							"<br/> <br/>" +
+
+							"<select name='mono' size=1>" +
+								"<option value='1'> --Selectionnez quel matière souhaitez-vous enseigner-- </option>" +
+								"<option value='2'>Game Design</option>" +
+								"<option value='3'>Algorithme de programmation</option>" +
+								"<option value='4'>Programmation Web HTML, CSS, JavaScript</option>" +
+								"<option value='5'>Langue Vivante, Anglais, Japonais</option>" +
+							"</select> <br/> <br/>" +
+
+							"<input type='submit' name='valider' id='valider' value='valider' onsubmit=''>" +
+							"<input type='reset' name='réinitialiser' id='réinitialiser' value='réinitialiser'>" +
+							"<button> <a href='IntroFormulaire1.html'>Recharger</a> </button> <br/>" +
+						"</fieldset>";
+
+					newForm.innerHTML = newContent;
+
+					var CurrentForm = document.getElementById("InsertTextByJS");
+
+					document.body.insertBefore(newForm,CurrentForm);*/
+
+
+					var form = document.getElementById("InsertTextByJS");
+
+					var newContent = "<fieldset> <legend> Formulaire identité </legend>" +
+
+						"<span>Nom :</span> <span class='required'>" +
+						"<input type='text' name='nom' id='nom' placeholder='saisir nom' required='required'> </span> <br/>" +
+
+						"<span>Prénom :</span> <input type='text' name='prénom' id='prénom' placeholder='saisir prénom'> <br/> <br/>" +
+						"<label for='mail'>Email :</label> <span class='required'><input type='email' name='mail' id='mail' placeholder='email' required='required'> </span> <br/>" +
+
+							"<span>Mot de passe :</span> <input type='password' name='passe' value='azerty' size=10>" +
+							"<br/> <br/>" +
+
+							"<input type='radio' name='sexe' value='homme' checked>Homme" +
+							"<input type='radio' name='sexe' value='femme'>Femme" +
+							"<br/>" +
+
+							"<input type='checkbox' name='majeur' checked>Majeur" +
+							"<input type='checkbox' name='etudiant'>Etudiant" +
+							"<br/> <br/>" +
+
+							"<select name='mono' size=1>" +
+								"<option value='1'> --Selectionnez quel matière souhaitez-vous enseigner-- </option>" +
+								"<option value='2'>Game Design</option>" +
+								"<option value='3'>Algorithme de programmation</option>" +
+								"<option value='4'>Programmation Web HTML, CSS, JavaScript</option>" +
+								"<option value='5'>Langue Vivante, Anglais, Japonais</option>" +
+							"</select> <br/> <br/>" +
+
+							"<input type='submit' name='valider' id='valider' value='valider' onsubmit=''>" +
+							"<input type='reset' name='réinitialiser' id='réinitialiser' value='réinitialiser'>" +
+							"<button> <a href='IntroFormulaire1.html'>Recharger</a> </button> <br/>" +
+						"</fieldset>";
+
+					form.innerHTML = newContent;
+
+				}
+
+				CreateTextByJS();
+			</script>
+
+			<footer> <div>Fais par David Lechevalier, le dernier de la classe HTML, d.lechevalier@ludus-academie.com</div> </footer>
+
+			<a href="#Haut" id="Retour"> Aller en haut de la page </a> <!-- Lien Interne et Externe-->
+			<p> Vous êtes à présent dans l'index du site </p> <!-- Changer la couleur des lien en bleu foncé et Alt. en Rouge foncé ?
+			+ lisible -->
+		</body>
+</html>

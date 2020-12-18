@@ -1,0 +1,179 @@
+<!DOCTYPE html> <!-- Type HTML5 -->
+	<html>
+		<head>
+	 		<meta charset="utf-8"/>
+	 		<html lang="fr">
+	 		<link rel="shortcut icon" type="image/x-icon" href="DossierImages/IconePage.png">
+	 		<link rel="stylesheet" type="text/css" href="DossierCSS/Basic.css">
+			<title img src="DossierImages/IconeTitre.png"> Page des 3 nombres & Prix HT </title>
+		</head>
+
+		<body>
+
+			<header>
+				<img src="DossierImages/IconeBanner.png" tile="logo" type="image/x-icon">
+			</header>
+
+			<h2 id="Haut"> Les 3 nombres </h2> <!-- Premier exercise -->
+
+			<p> Ecrire une page qui permet de saisir 3 nombres.  <br/>
+			Un bouton affiche leur somme, un autre le produit, un autre la moyenne, un autre le max de ces valeurs. </p>
+
+			
+				<label for="nombre1"> Nombre 1 </label>
+				<input type="number" name="nombre1" id="nombre1" placeholder="Veuillez saisir un nombre"/> <br/>
+
+				<label for="nombre2"> Nombre 2 </label>
+				<input type="number" name="nombre2" id="nombre2" placeholder="Veuillez saisir un nombre"/> <br/>
+
+				<label for="nombre3"> Nombre 3 </label>
+				<input type="number" name="nombre3" id="nombre3" placeholder="Veuillez saisir un nombre"/> <br/>
+
+				<label for="resultat"> Résultat </label>
+				<input type="number" id="resultat" value="" readonly="readonly" /> <br/>
+
+				<!-- <label> Résultat 2</label>
+				<input type="number" id="resultat2" value="" readonly="readonly" /> <br/> -->
+
+
+				
+				<input type="button" id="resultatSomme" value="Somme"   onclick="resultatSomme()"/>
+				<input type="button" value="Produit" onclick="resultatProduit()"/>
+				<input type="button" value="Moyenne" onclick="resultatMoyenne()"/>
+				<input type="button" value="Maximum" onclick="resultatMaximum()"/>
+
+		<!--	<input type="button" value="Somme avec paramètres" 
+												onclick="resultatSomme2(
+														Number(document.getElementById('nombre1').value),
+														Number(document.getElementById('nombre2').value),
+														Number(document.getElementById('nombre3').value));"/> -->
+
+
+			<script>
+
+				function resultatSomme(){	 /* Fonctionne */
+
+					var nbr1, nbr2, nbr3;
+					nbr1 = Number(document.getElementById("nombre1").value);
+					console.log(nbr1);
+					nbr2 = Number(document.getElementById("nombre2").value);
+					console.log(nbr2);
+					nbr3 = Number(document.getElementById("nombre3").value);
+					console.log(nbr3);
+
+					var rsltSomme = nbr1 + nbr2 + nbr3;
+					document.getElementById("resultat").value = rsltSomme ;
+					console.log(rsltSomme);
+
+				}
+
+				/*  function resultatSomme2(nb1,nb2,nb3){
+
+					console.log('Mes nombres :' , nb1, ' ',nb2, ' ',nb3);
+
+					var rsltSomme;
+					rsltSomme = nb1 + nb2 + nb3;
+					//document.getElementById('nombre1, nombre2, nombre3').elements["number"].value;
+					//document.getElementById("résultat").value = ;
+					console.log(rsltSomme);
+					document.getElementById("resultat2").value = rsltSomme;
+				} */
+
+				function resultatProduit(){	/* Fonctionne */
+
+					var nbr1, nbr2, nbr3;
+					nbr1 = Number(document.getElementById("nombre1").value);
+					console.log(nbr1);
+					nbr2 = Number(document.getElementById("nombre2").value);
+					console.log(nbr2);
+					nbr3 = Number(document.getElementById("nombre3").value);
+					console.log(nbr3);
+
+					var rsltProduit = nbr1 * nbr2 * nbr3;
+					document.getElementById("resultat").value = rsltProduit ;
+					console.log(rsltProduit);
+				}
+			
+				function resultatMoyenne(){	/* Fonctionne, mais mauvais calcule */
+
+					var nbr1, nbr2, nbr3;
+					nbr1 = Number(document.getElementById("nombre1").value);
+					console.log(nbr1);
+					nbr2 = Number(document.getElementById("nombre2").value);
+					console.log(nbr2);
+					nbr3 = Number(document.getElementById("nombre3").value);
+					console.log(nbr3);
+
+					var rsltMoyenne = nbr1 / nbr2 / nbr3;
+					document.getElementById("resultat").value = rsltMoyenne ; 
+					console.log(rsltMoyenne);
+				}
+
+			
+				function resultatMaximum(){	/* Ne fonctionne pas */
+
+					var nbr1, nbr2, nbr3;
+					nbr1 = Number(document.getElementById("nombre1").value);
+					console.log(nbr1);
+					nbr2 = Number(document.getElementById("nombre2").value);
+					console.log(nbr2);
+					nbr3 = Number(document.getElementById("nombre3").value);
+					console.log(nbr3);
+
+					var reste = 0 ;
+					var rsltMaximum = 0 ;
+
+					rsltMaximum = nbr1 * nbr2 * nbr3;
+					document.getElementById("resultat").value = rsltMaximum ; 
+					console.log(rsltMaximum);}
+
+			</script>
+
+			<h2> Prix Hors Tax </h2> <!-- En construction -->
+
+			<p>Ecrire une page qui permet de saisir le prix de l’article HT et son nombre d’exemplaires,
+			Une liste de choix affiche les différents taux de TVA.
+			A la saisie de ces 3 valeurs (0 par défaut), le prix TTC est affiché (pas de bouton pour
+			appeler la fonction de calcul du prix TTC
+			</p>
+
+			<label for="nombre11"> Prix de l'article </label>
+			<input type="number" name="nombre11" id="nombre11" placeholder="Veuillez saisir un nombre"/>
+
+			<label for="nombre12"> Nombre d'article </label>
+			<input type="number" name="nombre12" id="nombre12" placeholder="Veuillez saisir un nombre"/>
+
+			<label for="nombre13"> Taux de TVA </label>
+			<select name="nombre13" id="nombre13">
+				<option value="TVA1">TVA1</option>
+				<option value="TVA2">TVA2</option>
+				<option value="TVA3">TVA3</option>
+				<option value="TVA4">TVA4</option>
+			</select>
+			<!-- <input type="number" name="nombre13" id="nombre13" placeholder="Veuillez saisir un nombre"/> -->
+
+			<label for="resultat2"> Résultat </label>
+			<input type="number" id="resultatTTC" value="" readonly="readonly" /> <br/>
+
+			<script>
+			var TaxTVA;
+			var PrixTTC;
+			switch (TVA().getDay()) {
+			  case 0:
+			    TaxTVA = "20"; // Ajouter directement le calcul avec les var, aucune demande de boutons pour actionner
+			    break;
+			  case 1:
+			    TaxTVA = "10"; // Le calcul demandé, en faite, la demande est même contre
+			    break;
+			}
+			document.getElementById("resultatTTC").innerHTML = "Le prix TTC est de " + PrixTTC;
+			</script>
+
+			<footer>
+				<div> Fais par David Lechevalier, le dernier de la classe HTML, d.lechevalier@ludus-academie.com </div>
+			</footer>
+
+			<a href="#Haut" id="Retour"> Aller en haut de la page </a> <!-- Lien Interne et Externe-->
+			<a href="index.html"> Retour à l'index </a>
+		</body>
+</html>

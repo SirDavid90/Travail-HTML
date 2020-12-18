@@ -1,0 +1,257 @@
+<!DOCTYPE html> <!-- Type HTML5 -->
+	<html>
+		<head> <!-- En-tête de page -->
+	 		<meta charset="utf-8"/> <!-- pour utiliser les accents -->
+	 		<html lang="fr">
+	 		<link rel="shortcut icon" type="image/x-icon" href="DossierImages/IconePage.png">
+	 		<link rel="stylesheet" type="text/css" href="DossierCSS/Basic.css">
+	 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+			<title img src="DossierImages/IconeTitre.png" id="LeTitre"> Leçon Dom </title>
+		</head>
+
+		<body> <!-- Corps de la page -->
+
+			<header> <img src="DossierImages/IconeBanner.png" tile="logo" type="image/x-icon"> </header> <!-- Le titre et logo de la page (à la pause) -->
+
+			<style>
+				#p1{
+					border-style:solid;
+					font-style: oblique;
+				}
+				.classep1 {
+					color:blue;
+				}
+
+				.test {
+					--
+				}
+			</style>
+
+			<div id="cadre" classe="p.test" style="border-width:10px;">
+				<h2 id="Haut"> Définition DOM </h2>
+
+			<p id="p1" classe="classep1"> Le Document Object Model est une interface de programmation normalisée par le W3C, <br/> qui permet à des scripts d'examiner et de modifier le contenu du navigateur web. <br/> C'est aussi la structure d'une page web, ou d'autres équivalents. <br/> <br/>
+			Le premier élément d’un Dom sont les racines (Root), puis il y a les noeux HTML…  <br/>
+			Qui utilise le système Parent/Enfant, pour ce reconnaître (en faîte on en parle plus içi, c’est tout). <br/>
+			C’est comme une représentation textuelle de Windows explorer. </p>
+
+			</div>
+
+			<h2> Evènements JV </h2>
+
+			<p> On peut modifier des choses en plein temps </p>
+
+			<script>
+				var Contour = document.getElementById("cadre"); /* Contour est un objet */ 
+				var Paragraphes = Contour.getElementsByTagName("p");
+				console.log("Paragraphes");
+
+				console.log(Array.isArray("Paragraphes"));
+				console.table("Paragraphes");
+				console.log(Paragraphes.lens);
+
+				// var test = document.querrySelectorAll("p.test"); /* On peut remplacer un . pour chercher une classe par un # pour chercher un id, ce qui veut dire qu'on peut trouver par CSS ou ID */
+
+				// var CherchId = document.getElementById();
+
+				// console.log(x[0].innerHTML); /* Contenue du 1er élément du noeud */
+			</script>
+
+			<button id=b1 onclick="BordurePlus()"> Epaissir la bordure </button>
+
+				<script>
+					function BordurePlus() {
+						Contour.style.borderWidth = "20px" ; /* Sa marche car Contour est cadre + sa récupération*/
+					}
+					document.getElementById("b1").onclick = BordurePlus()  /* comment ajouter un evènement sur dom ? onclick, mousehover comment ? */
+					{	var Contour = document.getElementById("cadre");
+					//	console.log(contour.id);
+						console.log(contour.style.borderWidth);
+					}
+				</script>
+
+			<input id="Input1" label="fornb2" name="nb2" onclick="ChangeBGC()"> Non fonctionnel
+
+				<script>
+						function ChangeBGC() {
+							if onclick /* change BGC à bleu ciel */
+								else /* Sinon reste blanc */
+							document.getElementById("Input1").onfocus = ChangeBGC();
+							Input1.style.backgroundColor = lightblue ;
+
+						}
+				</script>
+
+    		<div id="div1"></div>
+    		<div id="div2"></div>
+
+			<div id="div2"> ? </div> <!-- Customiser ! -->
+
+				</script> <!-- ou est la putain d'erreur ? -->
+
+				<h2> Gestion des évènements avec le Dom </h2>
+				<h3 id="unh3"> Evènement Dom : cliquer (exemple 1) </h3>
+				<h3 id="unautreh3" onclick="TestChangement(this);TestAlerte()"> Evènement Dom : cliquer (exemple 2) </h3>
+
+
+				<script>
+					unh3.onclick = TestChangement(this)
+					function TestChangement(){
+						document.getElementById("unh3")
+						unh3.innerHTML = "Text changé dynamiquement par le onclick de Dom"
+				}
+				</script>
+
+				<script> // Test Test Test Test
+					/* function TestChangement(unh3) { // code inutilisé */
+					/*	TestAlerte();				 // "Affiche rapidement" */
+						function AfficherDate(unautreh3); //Ajouterun retour à la ligne br/ la date d'éxucution
+						function TesteAlert2();
+
+						{
+							function AfficherDate(unautreh3);
+							console.log(Date());
+
+						}
+				</script>
+
+				<h2> Gestion des event avec Dom EventListener </h2>
+				<p> La méthode addEventListener() ajoute des listeners à l'élément spécifié </p>
+				<p id="parOver"> Survoler pour voir l'éffet du addEventListener </p> 
+
+				<script> // RemoveEventListener
+					var objPar = document.getElementById("parOver");
+					objPar.addEventListener
+				</script>
+
+				<pre>
+					Attendu qu’un nœud peut contenir des nœuds, le texte contenu par un nœud est un nœud texte…
+
+									DOM Tutorial
+
+					On y accède avec la propriété innerHTML.
+					var myTitle = document.getElementById("demo").innerHTML;
+
+					On y accède avec la propriété nodevalue du 1er enfant du nœud.
+					var myTitle = document.getElementById("demo").firstChild.nodeValue;
+
+					Équivalent de :
+					var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
+					Tester sur une de vos pages.
+
+									 			 
+					Pour ajouter un élément au Dom, il faut d’abord le créer, puis l’ajouter à son parent.
+					Ne pas oublier que le texte est un textNode.
+					Supprimer avec remove() ou removeChild().
+
+					Très pratique :
+
+					var child = document.getElementById("p1");
+					child.parentNode.removeChild(child);
+
+					Remplacer un élément par un autre avec :
+					parent.replaceChild(para, child);
+				</pre>
+
+				<button id="btnDom">Dom</button>
+			    <script type="text/javascript">
+			        var theDom = document.getElementById('btnDom');
+			        theDom.addEventListener('click', TtmtNode);
+			        function TtmtNode(){
+			            console.log(document.firstChild.nodeName);
+			            console.log(document.firstChild.nodeValue);
+			            console.log(document.lastChild.nodeValue);
+
+					var myTitle = document.getElementById("LeTitre").firstChild ;
+					console.log 
+
+					var entete = document.getElementsByTagName(html)[0].firstchild.nodeName;
+					console.log(entete)
+
+					var AutreTitre = document.getElementsByTagName(html)[0].firstchild.childNodes[0].nodeType;
+					if(AutreTitre==3) AutreTitre = "Text_Node";
+
+					//var objEntete = document. ...
+
+					//Ensuite il y as 50 Test de la part du prof, était tous des :
+					// var Titre, Entete, TitreValue = document.getElementById ou NameTags(Un élément)[Nombre du Child].LequeldeChild puis Code, Type...
+					// En tout cas, un élément crée P, on peut le remplir avec TextNode, p.appendchild ou parent.insertBefore(p) pour du contenue.
+				</script>
+
+				<h2> Créer des éléments dans le Dom </h2>
+					<div id="div1">
+						<p id="para1"> Premier Paragraphe </p>
+						<p id="para2"> Deuxième Paragraphe (Non modifié) </p>
+					</div>
+
+				<script>
+					element.insertBefore(para1);
+					var paravar = document.createElement("p"); //Peut donne une résultat bizzard car il y déjà un p
+					// Créer un élément Paragraphe p
+					var node = document.createTextNode("Un nouveau Text pour un nouveau paragraphe");
+					//...
+					var Parent = document.getElementById("div1");
+					var Child = document.getElementById("para1");
+
+					createElement("p");
+					createTextNode("Text dynamique");
+					p.appendchild(TextNode); //Ne t'inquiète pas, le p fais référence à quelque chose, tu peux y faire réfférencé ce que tu désir
+				</script>
+
+				<pre>
+					Voir le damier en DOM.
+
+					La propriété innerHTML permet d’accéder au contenu d’un paragraphe, Div….
+
+					Document est à la racine de la page HTML ; il est le propriétaire de tous les objets de la page.
+
+					On accède à tous nos objets par document. :
+
+					document.getElementById(id)  
+
+					document.getElementsByTagName(name)        
+
+					document.getElementsByClassName(name)      
+
+					Changer les éléments de la page :
+
+					element.innerHTML =  new html content           
+
+					element.attribute = new value 
+
+					element.style.property = new style
+
+					element.setAttribute(attribute, value)
+
+					Ajout/Suppression d’éléments :
+
+					document.createElement(element)        Create an HTML element
+
+					document.removeChild(element)          Remove an HTML element
+
+					document.appendChild(element)          Add an HTML element
+
+					document.replaceChild(new, old)        Replace an HTML element
+
+					document.write(text)
+
+				</pre>
+
+				<script>
+					// Il faut créer un damier, on peut le faire avec des Tables
+					// Avce sles boucles : Case 1 blanc, modulo pair noir, modulo impaire blanc //Set attribute
+
+					function CreateDamier () {
+
+						var IsWhite = true;
+						var BoardSize = prompt(BoardSize)
+					}
+				</script>
+
+
+			<footer> <div>Fais par David Lechevalier, le dernier de la classe HTML, d.lechevalier@ludus-academie.com</div> </footer>
+
+			<a href="#Haut" id="Retour"> Aller en haut de la page </a> <!-- Lien Interne et Externe-->
+			<a href="index.html"> Retour à l'index </a>
+		</body>
+</html>

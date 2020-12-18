@@ -1,0 +1,142 @@
+<!DOCTYPE html> <!-- Type HTML5 -->
+	<html>
+		<head> <!-- En-tête de page -->
+	 		<meta charset="utf-8"/> <!-- pour utiliser les accents -->
+	 		<html lang="fr">
+	 		<link rel="shortcut icon" type="image/x-icon" href="DossierImages/IconePage.png">
+	 		<link rel="stylesheet" type="text/css" href="DossierCSS/Basic.css">
+			<title img src="DossierImages/IconeTitre.png"> Animation JV </title>
+		</head>
+
+		<body> <!-- Corps de la page -->
+
+			<header> <img src="DossierImages/IconeBanner.png" tile="logo" type="image/x-icon"> </header> <!-- Le titre et logo de la page (à la pause) -->
+
+			<style>
+				#p1{
+					border-style:solid;
+					font-style: oblique;
+				}
+				.classep1 {
+					color:blue;
+				}
+			</style>
+
+			<h2> Déplacer une div avec les flèches du clavier, Savoir récupérer la touche appuyée </h2>
+
+			
+			<div>
+				<h2 id="Haut"> Page d'accueille </h2>
+
+			
+			</div>
+
+				<h2> Animation Dom Javascript scripté et manipulé </h2> <!-- Faire un cercle avec un radius de 90-->
+
+					<style>
+						.Sauf {
+							margin:0;
+    						padding:0;
+						}
+						#AnimatedDiv {
+							height: 550px;
+							width: 550px;
+						}
+						#Animation, #KeycodeAnim, #KeycodeAnim2  {
+							position: relative;
+							height : 50px;
+							width : 50px;
+							}
+					</style>
+
+					
+					<div id="AnimatedDiv" classe="Sauf">
+						<div id="Animation" classe="Sauf">
+						</div>
+						<div id="KeycodeAnim" classe="Sauf">
+						</div>
+						<div id="KeycodeAnim2" classe="Sauf">
+						</div>
+					</div>
+
+					<button onclick="FunctionAnimatedDiv()"> Bloc d'animation </button>
+
+				<script>
+					function FunctionAnimatedDiv() {
+						var element = document.getElementById("Animation");
+						var pos = 0;
+						var id = setInterval(frame, 2);
+						function frame() {
+							if (pos == 450) {
+								clearInterval(id);
+							} else {
+						} 	pos++;
+							elem.style.top = pos + "px" ;
+						}	elem.style.left = pos + "px";
+					}
+				</script>
+				<script>
+
+					document.onkeydown = function FunctionPlayAnimDiv(event) /*Code emprimté*/
+
+					function FunctionPlayAnimDiv(){
+
+			        var posv = 0;
+			        var posh = 0;
+			        var posv2 = 0;
+			        var posh2 = 0;
+			        document.onkeydown = function(event) {
+		            event = event || window.event;
+		            var Bloc1 = document.getElementById('KeycodeAnim');
+		            var div2 = document.getElementById('div2');
+		            var KeycodeAnim = Bloc1.style;
+		            var monDiv2 = div2.style;
+		            switch(event.keyCode) {
+		                case 37 :
+		                    posh -= 20;
+		                    Bloc1.left = posh + 'px'; //gauche
+		                break;
+		                case 38 : 
+		                    posv -= 20;
+		                    Bloc1.top = posv + 'px';//haut
+		                break;
+		                case 39 :
+		                    posh += 20;
+		                    Bloc1.left = posh + 'px'; //droite
+		                break;
+		                case 40 :
+		                    posv += 20;
+		                    Bloc1.top = posv + 'px'; //bas
+		                break;
+		                case 81 :
+		                    posh2 -= 20;
+		                    monDiv2.left = posh2 + 'px'; //gauche
+		                break;
+		                case 90 : 
+		                    posv2 -= 20;
+		                    monDiv2.top = posv2 + 'px';//haut
+		                break;
+		                case 68 :
+		                    posh2 += 20;
+		                    monDiv2.left = posh2 + 'px'; //droite
+		                break;
+		                case 83 :
+		                    posv2 += 20;
+		                    monDiv2.top = posv2 + 'px'; //bas  			/*Code emprimté*/
+		                break;
+		            }
+		        }
+    			</script> 
+
+
+
+			<ul>
+				<li> <a href="JsDom.html"> JsDom.html </a> </li>
+			</ul>
+
+			<footer> <div>Fais par David Lechevalier, le dernier de la classe HTML, d.lechevalier@ludus-academie.com</div> </footer>
+
+			<a href="#Haut" id="Retour"> Aller en haut de la page </a> <!-- Lien Interne et Externe-->
+			<a href="index.html"> Retour à l'index </a>
+		</body>
+</html>
